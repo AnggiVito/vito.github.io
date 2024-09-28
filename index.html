@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="profile-card">
+        <img src="vito.png" alt="Profile Photo" class="profile-photo">
+        <h1 class="name">Anggi Vito Destamukti</h1>
+        <h2 class="sedang">NIM : 1202223104</h2>
+        <h3 class="kecil">Saya adalah mahasiswa Sistem Informasi di Telkom University</h3>
+        <div class="social-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <div class="datetime-container">
+            <span id="datetime"></span>
+        </div>
+    
+        <script>
+            function showDateTime() {
+                const now = new Date();
+                const dateTime = now.toLocaleString();  // Combines date and time
+                document.getElementById('datetime').textContent = dateTime;
+            }
+    
+            setInterval(showDateTime, 1000);  // Update every second
+            showDateTime();  // Initial call to show the time immediately
+        </script>
+    </div>
+</body>
+</html>
